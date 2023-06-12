@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Shantell+Sans&display=swap");
+:root {
+  --main-color: #dedede;
+  --black-calculator: #1c1c1c;
+  --border: #505050;
+  --orange-calculator: #ff9500;
+  --lightgray-calculator: #d4d4d2;
+  --soft-red: #faa;
+  --soft-white: #efefef;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--main-color);
+  font-family: "Open Sans", sans-serif;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  min-height: 500px;
+  margin-top: 50px;
+  padding: 10px;
+}
+.calculator {
+  width: 400px;
+  height: 500px;
+  border: 2px solid var(--border);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: var(--lightgray-calculator);
+}
+.screen {
+  padding: 10px 20px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  height: 100px;
+  margin-bottom: 10px;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: var(--soft-white);
+  overflow: auto;
+}
+button {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+.buttons {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 100%;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.span-two {
+  grid-column: span 2;
+}
+#clear,
+#delete {
+  background-color: var(--soft-red);
+}
+.previous-operand {
+  font-size: 1.2rem;
+}
+.current-operand {
+  font-size: 2.2rem;
+}
